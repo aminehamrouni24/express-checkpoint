@@ -8,7 +8,7 @@ app.use(addActiveTime =(req, res, next)=> {
   
     let hours= new Date().getHours();
     let day= new Date().getDay();
-    if((hours>9)||(hours<17)||(day==0)||(day==6))
+    if((hours>=9)||(hours<=17)||(day==0)||(day==6))
   {
     res.sendFile(__dirname+'/views/closed.html')
     
